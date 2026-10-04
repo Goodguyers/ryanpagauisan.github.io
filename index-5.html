@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Ryan Pagauisan — IT Support and System Administrator Portfolio">
+<title>Ryan Pagauisan | IT Support & System Administrator</title>
+<style>
+:root{--bg:#05090d;--panel:#0b1218;--panel2:#0f1a22;--line:#1b3039;--text:#edf7f5;--muted:#8fa5aa;--green:#52f2ad;--blue:#4fc3ff;--shadow:0 25px 70px rgba(0,0,0,.4);--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#123a31 0,transparent 27%),radial-gradient(circle at 10% 30%,#09202e 0,transparent 25%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:40px 40px}
+.nav{position:fixed;z-index:100;top:0;left:0;right:0;height:74px;background:rgba(5,9,13,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(82,242,173,.12);display:flex;align-items:center}
+.nav-inner{width:min(var(--max),calc(100% - 40px));margin:auto;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.35rem;font-weight:900;letter-spacing:-.07em}.logo b{color:var(--green)}nav{display:flex;gap:28px}nav a{font-size:.88rem;color:var(--muted);transition:.2s}nav a:hover{color:var(--green)}.menu{display:none;border:1px solid var(--line);background:var(--panel);color:white;border-radius:8px;padding:8px 10px;font-size:1.1rem}
+main{padding-top:74px}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.hero{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;padding:90px 0}
+.eyebrow{font-size:.73rem;letter-spacing:.18em;color:var(--green);font-weight:900}.hero h1{font-size:clamp(3.2rem,7vw,6.5rem);line-height:.91;letter-spacing:-.075em;margin:16px 0 28px}.hero h1 em{font-style:normal;color:var(--green)}.hero p{max-width:680px;color:var(--muted);font-size:1.08rem}.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:12px 18px;border-radius:8px;font-weight:800;font-size:.9rem;border:1px solid var(--line)}.primary{background:var(--green);color:#04100b}.secondary:hover{border-color:var(--green);color:var(--green)}
+.terminal{border:1px solid #24424b;background:#03070a;border-radius:14px;box-shadow:var(--shadow);overflow:hidden}.term-top{height:44px;border-bottom:1px solid #17282f;display:flex;align-items:center;padding:0 15px;gap:7px}.dot{width:9px;height:9px;border-radius:50%;background:#33474d}.term-title{margin-left:9px;color:#61777c;font:11px monospace}.terminal pre{margin:0;padding:28px;color:#b5c9ca;font:13px/1.85 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto}.terminal .g{color:var(--green)}.terminal .b{color:var(--blue)}
+.section{padding:105px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}.section h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.055em;margin:8px 0 0}.muted{color:var(--muted)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(145deg,rgba(15,26,34,.95),rgba(7,14,19,.95));border:1px solid var(--line);border-radius:14px;padding:28px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:100px;height:100px;right:-50px;top:-50px;border-radius:50%;background:var(--green);opacity:.04}.card:hover{border-color:#2c6256;transform:translateY(-2px);transition:.2s}.number{font:700 12px monospace;color:var(--green)}.card h3{margin:9px 0 8px;font-size:1.3rem}.card p{color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.tag{border:1px solid #245248;color:#9beac9;padding:4px 8px;border-radius:99px;font-size:.68rem}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}.about p{font-size:1.03rem;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}.fact{border:1px solid var(--line);padding:15px;border-radius:9px;background:var(--panel)}.fact b{display:block}.fact span{color:var(--muted);font-size:.8rem}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.skill{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:11px}.skill strong{display:block}.skill span{font-size:.82rem;color:var(--muted)}
+.topology{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px}.top-label{text-align:center;color:var(--muted);font:700 11px monospace;letter-spacing:.15em}.node{border:1px solid #28524b;background:#0b1d1b;border-radius:9px;min-width:150px;padding:12px;text-align:center;font-weight:800}.node small{display:block;color:var(--muted);font-weight:500;font-size:.7rem}.connector{height:24px;width:1px;background:#38545a;margin:auto}.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.router{background:#0c1c2a;border-color:#25506a}
+.case{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:22px 0}summary{list-style:none;cursor:pointer;display:flex;gap:18px;font-weight:800}summary::-webkit-details-marker{display:none}.case-no{color:var(--green);font-family:monospace}details p{margin:14px 0 0 48px;color:var(--muted);max-width:800px}
+.evidence{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.shot{aspect-ratio:16/10;border:1px dashed #31525a;border-radius:10px;background:#081116;display:flex;align-items:center;justify-content:center;text-align:center;color:#71898e;font-size:.78rem;font-weight:800;padding:15px}
+.timeline{display:grid;gap:12px}.step{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.step b{color:var(--green);font-family:monospace}.step p{margin:0;color:var(--muted)}
+
+.resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.resume-card{background:linear-gradient(145deg,rgba(15,26,34,.95),rgba(7,14,19,.95));border:1px solid var(--line);border-radius:14px;padding:28px}
+.resume-card h3{margin:7px 0 12px;font-size:1.25rem}.resume-card p,.resume-card li{color:var(--muted)}
+.resume-card ul{padding-left:20px;margin:10px 0}.resume-card li{margin:7px 0}.resume-card.full{grid-column:1/-1}
+.job{border-left:2px solid #245248;padding-left:18px;margin:18px 0}.job strong{display:block;color:var(--text)}.job .meta{font-size:.78rem;color:var(--green);font-family:monospace;margin:3px 0 10px}
+.skill-list{display:flex;flex-wrap:wrap;gap:8px}.skill-pill{border:1px solid #245248;color:#9beac9;padding:6px 10px;border-radius:99px;font-size:.72rem}
+@media(max-width:850px){.resume-grid{grid-template-columns:1fr}.resume-card.full{grid-column:auto}}
+.contact{background:linear-gradient(145deg,#0a1d1b,#071017);border:1px solid #244b45;border-radius:16px;padding:55px}.contact h2{max-width:650px}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.links a{padding:11px 15px;border:1px solid var(--line);border-radius:8px}.links a:hover{color:var(--green);border-color:var(--green)}footer{padding:35px 0;color:#647b80;text-align:center;font-size:.78rem;border-top:1px solid var(--line);margin-top:105px}
+@media(max-width:850px){nav{display:none}.menu{display:block}nav.open{position:absolute;display:flex;top:74px;left:0;right:0;padding:20px;background:#071014;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}.hero,.about,.evidence{grid-template-columns:1fr}.hero{padding:65px 0}.grid2,.skills,.branches{grid-template-columns:1fr}.section{padding:75px 0}.section-head{align-items:flex-start;flex-direction:column}.contact{padding:35px 25px}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner"><a class="logo" href="#home">RP<span>.</span></a><button class="menu" onclick="toggleMenu()">☰</button><nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#project">Project</a><a href="#skills">Skills</a><a href="#support">Support</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section id="home"><div class="wrap hero"><div><div class="eyebrow">IT SUPPORT • SYSTEM ADMINISTRATION • NETWORKING</div><h1>Building, managing & <em>troubleshooting</em> IT infrastructure.</h1><p>A practical portfolio demonstrating Windows Server, Active Directory, networking, Linux administration, security, virtualization, and technical support through a hands-on lab environment.</p><div class="buttons"><a class="btn primary" href="#project">Explore Project →</a><a class="btn secondary" href="#contact">Contact Me</a></div></div><div class="terminal"><div class="term-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="term-title">system-admin@portfolio:~</span></div><pre>$ whoami
+<span class="g">Ryan Pagauisan</span>
+
+$ role
+IT Support / System Administrator
+
+$ skills
+<span class="b">Windows Server 2025</span>
+Active Directory • DNS • DHCP
+Ubuntu • Apache • Hyper-V
+Networking • Troubleshooting
+
+$ status
+<span class="g">● LAB ONLINE</span></pre></div></div></section>
+
+<section id="about" class="section"><div class="wrap about"><div><div class="eyebrow">ABOUT ME</div><h2>Technical Support, Network Management & System Configuration</h2></div><div><p>To apply my expertise in technical support, network management, and system configuration to drive innovation, streamline operations, and enhance system reliability at your Company. Committed to staying ahead of emerging technologies, I aim to support digital transformation and foster growth, collaboration, and success.</p><p>Seeking an opportunity as a Shopify Product Lister / Virtual Assistant where I can apply my technical knowledge, attention to detail, data-entry skills, and ability to quickly learn new platforms and procedures.</p><div class="facts"><div class="fact"><b>Focus</b><span>IT Support & System Administration</span></div><div class="fact"><b>Environment</b><span>Windows Server + Linux + Clients</span></div><div class="fact"><b>Virtualization</b><span>Hyper-V Lab</span></div><div class="fact"><b>Approach</b><span>Configure • Test • Troubleshoot • Document</span></div></div></div></div></section>
+
+<section id="project" class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">FEATURED PROJECT</div><h2>Small Office Network & System Administration Infrastructure</h2></div><span class="tag">LAB PROJECT</span></div><div class="grid2">
+<article class="card"><div class="number">01 / WINDOWS SERVER</div><h3>Active Directory & Identity</h3><p>Configured AD DS with users, groups, organizational units, domain authentication, password policy, and account lockout.</p><div class="tags"><span class="tag">AD DS</span><span class="tag">Users & Groups</span><span class="tag">GPO</span></div></article>
+<article class="card"><div class="number">02 / NETWORK SERVICES</div><h3>DNS & DHCP</h3><p>Designed a 192.168.10.0/24 lab network with static server addresses and DHCP for Windows client devices.</p><div class="tags"><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">TCP/IP</span></div></article>
+<article class="card"><div class="number">03 / LINUX</div><h3>Ubuntu & Apache</h3><p>Deployed Ubuntu Server with SSH, Apache Web Server, service management, firewall rules, and browser-based validation.</p><div class="tags"><span class="tag">Ubuntu</span><span class="tag">Apache</span><span class="tag">SSH</span><span class="tag">UFW</span></div></article>
+<article class="card"><div class="number">04 / SECURITY</div><h3>Access & System Security</h3><p>Implemented password requirements, account lockout, user permissions, firewall configuration, and event-log review.</p><div class="tags"><span class="tag">Security</span><span class="tag">Least Privilege</span><span class="tag">Logging</span></div></article>
+</div>
+<div class="topology" style="margin-top:18px"><div class="top-label">LAB NETWORK TOPOLOGY</div><div style="text-align:center;margin-top:24px"><div class="node" style="margin:auto">INTERNET</div><div class="connector"></div><div class="node router" style="margin:auto">ROUTER<small>192.168.10.1</small></div><div class="connector"></div><div class="node" style="margin:auto">SWITCH</div><div class="branches"><div class="node">DC01<small>Windows Server 2025</small><small>192.168.10.10</small></div><div class="node">UBUNTU-SRV01<small>Apache Server</small><small>192.168.10.20</small></div><div class="node">CLIENT01<small>Windows 11</small><small>DHCP</small></div></div></div></div></div></section>
+
+<section id="skills" class="section"><div class="wrap"><div class="eyebrow">TECHNICAL SKILLS</div><h2>Tools & technologies</h2><div class="skills" style="margin-top:32px"><div class="skill"><strong>Windows Server</strong><span>AD DS · DNS · DHCP · Group Policy</span></div><div class="skill"><strong>Networking</strong><span>TCP/IP · IP addressing · connectivity troubleshooting</span></div><div class="skill"><strong>Linux Administration</strong><span>Ubuntu · SSH · Apache · UFW</span></div><div class="skill"><strong>Virtualization</strong><span>Hyper-V · virtual lab deployment</span></div><div class="skill"><strong>IT Support</strong><span>Hardware/software · printers · user support</span></div><div class="skill"><strong>Security</strong><span>Access control · passwords · firewall · event logs</span></div></div></div></section>
+
+<section id="support" class="section"><div class="wrap"><div class="eyebrow">IT SUPPORT CASE STUDIES</div><h2>Problem → Diagnosis → Resolution</h2><div class="case" style="margin-top:28px"><details open><summary><span class="case-no">01</span>User cannot log in</summary><p>Checked the account in Active Directory, verified lockout status, unlocked or reset the account, and validated successful authentication from the client.</p></details><details><summary><span class="case-no">02</span>Client has no network access</summary><p>Used <code>ipconfig /all</code>, ping, and DNS tests to isolate whether the issue was DHCP, DNS, gateway, or server connectivity.</p></details><details><summary><span class="case-no">03</span>Apache website unavailable</summary><p>Checked <code>systemctl status apache2</code>, verified port 80, reviewed firewall rules, restarted the service when required, and retested from a Windows client.</p></details><details><summary><span class="case-no">04</span>Printer output problem</summary><p>Checked connectivity, driver and print queue status, restarted the print service, performed a test print, and documented the corrective action.</p></details></div></div></section>
+
+<section class="section"><div class="wrap evidence"><div><div class="eyebrow">PROJECT EVIDENCE</div><h2>Document the work. Prove the skills.</h2><p class="muted">Replace these placeholders with your real screenshots as you complete the lab: Server Manager, AD Users and Computers, DNS/DHCP, Group Policy, Windows client testing, Ubuntu services, Apache, and troubleshooting results.</p></div><div class="evidence-grid"><div class="shot">ADD SCREENSHOT<br>AD DS / USERS & GROUPS</div><div class="shot">ADD SCREENSHOT<br>DNS / DHCP</div><div class="shot">ADD SCREENSHOT<br>UBUNTU / APACHE</div><div class="shot">ADD SCREENSHOT<br>TROUBLESHOOTING</div></div></div></section>
+
+<section class="section"><div class="wrap"><div class="eyebrow">IMPLEMENTATION ROADMAP</div><h2>From deployment to validation.</h2><div class="timeline" style="margin-top:30px"><div class="step"><b>01</b><p><strong>Plan</strong><br>Define topology, IP addressing, servers, clients, services, and security requirements.</p></div><div class="step"><b>02</b><p><strong>Build</strong><br>Create Hyper-V virtual machines and configure Windows Server, Ubuntu Server, and Windows clients.</p></div><div class="step"><b>03</b><p><strong>Configure</strong><br>Deploy AD DS, DNS, DHCP, GPO, Apache, SSH, firewall rules, users, groups, and permissions.</p></div><div class="step"><b>04</b><p><strong>Test & Troubleshoot</strong><br>Validate authentication, addressing, name resolution, web services, access control, and support scenarios.</p></div><div class="step"><b>05</b><p><strong>Document</strong><br>Capture evidence, record problems and resolutions, and publish the final portfolio.</p></div></div></div></section>
+
+
+<section id="resume" class="section">
+<div class="wrap">
+  <div class="section-head">
+    <div><div class="eyebrow">RESUME</div><h2>Professional background & qualifications.</h2></div>
+    <span class="tag">UPDATED 2026</span>
+  </div>
+
+  <div class="resume-grid">
+    <article class="resume-card full">
+      <div class="number">PROFESSIONAL SUMMARY</div>
+      <p>To apply my expertise in technical support, network management, and system configuration to drive innovation, streamline operations, and enhance system reliability. Committed to staying ahead of emerging technologies, I aim to support digital transformation and foster growth, collaboration, and success.</p>
+      <p>Seeking an opportunity as a Shopify Product Lister / Virtual Assistant where I can apply my technical knowledge, attention to detail, data-entry skills, and ability to quickly learn new platforms and procedures.</p>
+      <div class="tags"><span class="tag">Cagayan Valley, Philippines</span><span class="tag">ryanpagauisan2001@gmail.com</span></div>
+    </article>
+
+    <article class="resume-card full">
+      <div class="number">WORK EXPERIENCE</div>
+      <div class="job">
+        <strong>Provincial Government of Cagayan Valley, Philippines — IPA-ISD / System Administrator</strong>
+        <div class="meta">May 2026 – Present</div>
+        <ul>
+          <li>Managed computer networks.</li>
+          <li>Configured and troubleshot routers, switches, access points, and basic firewall rules.</li>
+          <li>Configured VLANs, IP addressing, DHCP, DNS, and basic routing concepts.</li>
+          <li>Managed Windows Server and Linux systems.</li>
+          <li>Configured Active Directory user accounts, groups, and permissions.</li>
+          <li>Managed cloud hosting, virtual machines, and website storage.</li>
+          <li>Managed and configured cloud platforms such as AWS (Amazon Web Services).</li>
+          <li>Performed regular system backups and restored files when needed.</li>
+          <li>Monitored system performance and identified common issues such as storage and CPU usage.</li>
+          <li>Assisted in diagnosing malware, security alerts, and update requirements.</li>
+          <li>Provided technical support and documented IT procedures within the Capitol.</li>
+          <li>Troubleshot hardware, software, and network issues.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <strong>Toyota Financial Services, Ayala Avenue, Makati City — File Matcher / Credit Verifier</strong>
+        <div class="meta">January 2025 – February 2026</div>
+        <ul>
+          <li>Reviewed and matched client documents, loan applications, contracts, IDs, and supporting papers with system records.</li>
+          <li>Verified accuracy and completeness of client files before processing.</li>
+          <li>Identified mismatched or missing documents and coordinated with concerned departments for corrections.</li>
+          <li>Maintained organized physical and electronic filing systems for client records.</li>
+          <li>Ensured confidentiality and compliance with data privacy policies.</li>
+          <li>Assisted in preparing reports on matched, unmatched, or pending files for management review.</li>
+          <li>Performed clerical and administrative records-management tasks.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="resume-card">
+      <div class="number">TECHNICAL SKILLS</div>
+      <div class="skill-list" style="margin-top:15px">
+        <span class="skill-pill">Windows</span><span class="skill-pill">Linux / Ubuntu</span>
+        <span class="skill-pill">System Administration</span><span class="skill-pill">Network Administration</span>
+        <span class="skill-pill">Technical Support</span><span class="skill-pill">AWS</span>
+        <span class="skill-pill">Active Directory</span><span class="skill-pill">DNS</span>
+        <span class="skill-pill">DHCP</span><span class="skill-pill">VLANs</span>
+        <span class="skill-pill">Troubleshooting</span><span class="skill-pill">Documentation</span>
+      </div>
+    </article>
+
+    <article class="resume-card">
+      <div class="number">PRODUCTIVITY & WEB</div>
+      <div class="skill-list" style="margin-top:15px">
+        <span class="skill-pill">Microsoft Word</span><span class="skill-pill">Microsoft Excel</span>
+        <span class="skill-pill">Microsoft PowerPoint</span><span class="skill-pill">Google Docs</span>
+        <span class="skill-pill">Google Sheets</span><span class="skill-pill">Google Drive</span>
+        <span class="skill-pill">Shopify — Familiar / Developing</span><span class="skill-pill">Website Content Management</span>
+        <span class="skill-pill">Web-Based Applications</span><span class="skill-pill">Data Entry</span>
+        <span class="skill-pill">Internet Research</span><span class="skill-pill">File Management</span>
+      </div>
+    </article>
+
+    <article class="resume-card">
+      <div class="number">EDUCATION</div>
+      <h3>Bachelor of Information Technology</h3>
+      <p><strong>Cagayan State University – Carig Campus</strong><br>Major in Network and Cybersecurity<br>SY 2019 – SY 2024</p>
+    </article>
+
+    <article class="resume-card">
+      <div class="number">TRAINING & SEMINARS</div>
+      <ul>
+        <li>16 Hours of training workshop in Information Communication Technology and Communication Skills Enhancement during the Pre-Deployment Orientation Seminar at CSU Carig Campus.</li>
+        <li>2-day Training on Basic Fiber Optic Splicing with Network Configuration at Police Regional Office 2.</li>
+        <li>Certificate of Participation in Hack for GOV Competition.</li>
+      </ul>
+    </article>
+
+    <article class="resume-card full">
+      <div class="number">RELEVANT E-COMMERCE / PRODUCT LISTING SKILLS</div>
+      <p>Although my professional background is primarily in information technology and systems support, my existing skills are applicable to Shopify product-listing work.</p>
+      <ul>
+        <li>Creating and updating product listings, names, descriptions, prices, and product information.</li>
+        <li>Uploading and organizing product images; managing categories, collections, and tags.</li>
+        <li>Adding variants such as size, color, or style; updating SKUs and inventory information.</li>
+        <li>Reviewing listings for missing or incorrect information and formatting descriptions consistently.</li>
+        <li>Copying information accurately from supplier websites or spreadsheets.</li>
+        <li>Conducting product and competitor research and maintaining organized product information using Excel or Google Sheets.</li>
+        <li>Following product-listing templates and client guidelines.</li>
+      </ul>
+    </article>
+
+    <article class="resume-card full">
+      <div class="number">REFERENCE</div>
+      <div class="grid2">
+        <p><strong>Jenerwin Balucay</strong><br>Technical Support<br>+63 9365 779 809</p>
+        <p><strong>Gamaliel Bianco Jr.</strong><br>Team Leader in Toyota<br>+63 949 8083 881</p>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="section"><div class="wrap"><div class="contact"><div class="eyebrow">CONTACT</div><h2>Interested in my IT Support or System Administration skills?</h2><p class="muted">Replace the links below with your professional contact details, LinkedIn, GitHub, and resume.</p><div class="links"><a href="mailto:ryanpagauisan2001@gmail.com">✉ Email</a><a href="#" onclick="return false">in LinkedIn</a><a href="#" onclick="return false">⌘ GitHub</a><a href="#" onclick="return false">↓ Resume</a></div></div></div></section>
+</main>
+<footer>© 2026 Ryan Pagauisan · IT Support & System Administration Portfolio</footer>
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
